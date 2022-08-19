@@ -48,4 +48,4 @@ ujson
 telethon>=1.10.3
 datetime
 speedtest-cli>=2.0.2
-textwrap
+
