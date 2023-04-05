@@ -62,7 +62,6 @@ async def start(client, message):
         get="GOOD EVENING"
         
     if message.chat.type in [enums.ChatType.GROUP, enums.ChatType.SUPERGROUP]:
-       
         await message.reply_photo(
             photo=random.choice(ALL_PIC),
             caption=f"""HI {get} {message.from_user.mention} HOW ARE YOU ?""",reply_markup=reply_markup)
