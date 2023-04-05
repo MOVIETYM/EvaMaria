@@ -62,15 +62,10 @@ async def start(client, message):
         get="GOOD EVENING"
         
     if message.chat.type in [enums.ChatType.GROUP, enums.ChatType.SUPERGROUP]:
-        buttons = [
-            [
-                InlineKeyboardButton('⚡️CHANNEL⚡️', url='https://t.me/Movietymofficial')
-            ]
-            ]
-        reply_markup = InlineKeyboardMarkup(buttons)
+       
         await message.reply_photo(
             photo=random.choice(ALL_PIC),
-            caption=f"""HI {get} {message.from_user.mention} HOW ARE YOU BRO?""",reply_markup=reply_markup)
+            caption=f"""HI {get} {message.from_user.mention} HOW ARE YOU ?""",reply_markup=reply_markup)
         await asyncio.sleep(2) # 😢 https://github.com/EvamariaTG/EvaMaria/blob/master/plugins/p_ttishow.py#L17 😬 wait a bit, before checking.
         if not await db.get_chat(message.chat.id):
             total=await client.get_chat_members_count(message.chat.id)
@@ -84,9 +79,6 @@ async def start(client, message):
         buttons = [[
             InlineKeyboardButton('🔍 Search', switch_inline_query_current_chat=''),
             InlineKeyboardButton('ℹ️ Help', callback_data='help')
-        ], [
-            InlineKeyboardButton('CHANNEL', url='https://t.me/Movietymofficial'),
-            InlineKeyboardButton('GROUP', url='https://t.me/Movietym_official_group')
         ], [
             InlineKeyboardButton('😊 About', callback_data='about')
         ], [
@@ -146,9 +138,6 @@ async def start(client, message):
         buttons = [[
             InlineKeyboardButton('🔍 Search', switch_inline_query_current_chat=''),
             InlineKeyboardButton('ℹ️ Help', callback_data='help')
-        ], [
-            InlineKeyboardButton('CHANNEL', url='https://t.me/Movietymofficial'),
-            InlineKeyboardButton('GROUP', url='https://t.me/Movietym_official_group')
         ], [
             InlineKeyboardButton('😊 About', callback_data='about')
         ], [
