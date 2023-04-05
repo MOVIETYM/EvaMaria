@@ -39,7 +39,6 @@ async def save_group(bot, message):
             return
         buttons = [[
             InlineKeyboardButton('ℹ️ Help', url=f"https://t.me/{temp.U_NAME}?start=help"),
-            InlineKeyboardButton('MAIN CHANNEL', url='https://t.me/Movietymofficial')
         ]]
         reply_markup=InlineKeyboardMarkup(buttons)
         await message.reply_text(
@@ -57,10 +56,6 @@ async def save_group(bot, message):
                 temp.MELCOW['welcome'] = await message.reply_photo(
                                              photo=random.choice(JOIN_PIC),
                                              caption=f"""<b>Hey , {u.mention}, Welcome to {message.chat.title}</b>""",
-                                             reply_markup=InlineKeyboardMarkup( [[ 
-                                                 InlineKeyboardButton("Join Our Channel", url="t.me/Movietymofficial")
-                                                 ]] 
-                                                 )
                                              )
                 
 JOIN_PIC = [
